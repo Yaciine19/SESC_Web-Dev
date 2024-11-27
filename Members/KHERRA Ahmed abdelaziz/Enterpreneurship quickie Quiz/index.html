@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneurship QA Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Startup Screen -->
+    <div class="startup-screen" id="startup-screen">
+        <h1 id="welcome-message">Welcome Everyone</h1>
+        <p id="encouragement" class="encouragement">Do your best, and a secret treat awaits you if you get them all right!</p>
+        <button id="start-btn" class="start-btn">Press to Start</button>
+    </div>
+
+    <!-- Mode Selection -->
+    <div class="mode-selection" id="mode-selection" style="display: none;">
+        <h2>Select Game Mode</h2>
+        <button id="normal-mode" class="mode-btn">Normal Mode</button>
+        <button id="time-attack-mode" class="mode-btn">Time Attack Mode</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="game-screen" id="game-screen" style="display: none;">
+        <h1>Entrepreneurship QA Game</h1>
+        <p id="question"></p>
+
+        <div id="answers"></div>
+
+        <p>Score: <span id="score">0</span></p>
+        <p id="timer" style="display: none;">Time Left: <span id="time-left">19</span> seconds</p>
+        <div id="timer-circle" class="timer-circle" style="display: none;">
+            <span id="timer-text">19</span>
+        </div>
+        <button id="restart-btn" class="restart-btn" style="display: none;">Restart Game</button>
+    </div>
+
+    <!-- Final Verdict -->
+    <div id="final-verdict" class="final-verdict" style="display: none;">
+        <!-- Final message will be dynamically added here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

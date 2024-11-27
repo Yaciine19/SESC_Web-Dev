@@ -1,0 +1,92 @@
+/* Basic reset for body */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f3f3;
+}
+
+/* Centered container for the login form */
+.login-container {
+    width: 320px;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title styling */
+.login-container h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: 600;
+}
+
+/* Input field styling */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #000000;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #4F46E5;
+}
+
+/* Sign-in button styling */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4F46E5;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #3b36b3;
+}
+
+/* Sign-up link styling */
+.login-container p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.login-container p a {
+    color: #4F46E5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Message styling */
+#message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+}
