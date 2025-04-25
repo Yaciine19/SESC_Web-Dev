@@ -22,7 +22,7 @@ body {
 }
 
 .logo {
-    padding-inline: 5px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -402,6 +402,11 @@ footer .next_btn:hover {
     .logo .sesc_logo {
         width: 70px;
         height: 70px;
+    }
+
+    .logo .second-logo img {
+        width: 90px;
+        height: 90px;
     }
     
     .start_btn button {
