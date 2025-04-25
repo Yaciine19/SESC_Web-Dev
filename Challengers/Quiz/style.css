@@ -7,17 +7,54 @@
     font-family: "Poppins", serif;
 }
 
-body {
-    background-color: #0B192C;
+:root {
+    --background-primary-color: #272152;
+    --background-secondry-color: #2612b9;
+    
+    --primary-color: #352C6C;
+    --secondry-color: #2916a9;
+    --light-color: #b7acff;
+    --lighter-color: #eeecff;
 }
 
-.start_btn, .info_box, .quiz_box, .result_box {
+body {
+    background-color: var(--background-primary-color);
+}
+
+.logo {
+    padding-inline: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo .sesc_logo {
+    width: 100px;
+    height: 100px;
+}
+
+.logo .second-logo {
+    background-color: #272152;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.logo .second-logo img {
+    width: 150px;
+    height: 150px;
+}
+
+.start_btn,
+.info_box,
+.quiz_box,
+.result_box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: all 0.3s ease;
 }
 
@@ -30,16 +67,16 @@ body {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.start_btn button{
-font-size: 25px;
-font-weight: 500;
-color: #FF6500;
-padding: 15px 60px;
-outline: none;
-border: none;
-border-radius: 5px;
-background: #fff;
-cursor: pointer;
+.start_btn button {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--primary-color);
+    padding: 15px 60px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
 }
 
 .info_box {
@@ -73,7 +110,7 @@ cursor: pointer;
 
 .info_box .info_list .info span {
     font-weight: 600;
-    color: #FF6500;
+    color: var(--primary-color);
 }
 
 .info_box .buttons {
@@ -90,7 +127,7 @@ cursor: pointer;
     height: 40px;
     width: 150px;
     outline: none;
-    border: 1px solid #FF6500;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     color: #fff;
     font-size: 16px;
@@ -100,21 +137,21 @@ cursor: pointer;
 }
 
 .buttons button.quit {
-    color: #FF6500;
+    color: var(--primary-color);
 }
 
 .buttons button.quit:hover {
     color: #fff;
-    background-color: #FF6500;
+    background-color: var(--primary-color);
 }
 
 .buttons button.restart {
     color: #fff;
-    background-color: #FF6500;
+    background-color: var(--primary-color);
 }
 
 .buttons button.restart:hover {
-    background-color: #d25807 ;
+    background-color: var(--secondry-color);
 }
 
 .quiz_box {
@@ -150,13 +187,13 @@ cursor: pointer;
     justify-content: space-between;
     width: 150px;
     height: 45px;
-    background-color: #ffd5b9;
-    border: 1px solid #ffc096;
+    background-color: var(--lighter-color);
+    border: 1px solid var(--light-color);
     border-radius: 5px;
     padding: 0 8px;
 }
 
-.quiz_box header .timer .time_text{
+.quiz_box header .timer .time_text {
     font-weight: 400;
     font-size: 17px;
     user-select: none;
@@ -168,20 +205,20 @@ cursor: pointer;
     left: 0;
     width: 0;
     height: 3px;
-    background-color: #FF6500;
+    background-color: var(--primary-color);
 }
 
 .quiz_box header .timer .timer_sec {
     font-size: 18px;
     font-weight: 500;
-    background-color: #1E3E62;
+    background-color: var(--background-secondry-color);
     height: 30px;
     width: 45px;
     color: #fff;
     text-align: center;
     line-height: 30px;
     border-radius: 5px;
-    border: 1px solid #1E3E62;
+    border: 1px solid var(--background-secondry-color);
     user-select: none;
 }
 
@@ -201,8 +238,8 @@ cursor: pointer;
 }
 
 section .option_list .option {
-    background-color: #fffcfb;
-    border: 1px solid #ffc7a2;
+    background-color: #f8f7ff;
+    border: 1px solid var(--lighter-color);
     padding: 8px 15px;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -215,8 +252,8 @@ section .option_list .option {
 }
 
 section .option_list .option:hover {
-    color: #FF6500;
-    background-color: #ffdac2;
+    color: var(--primary-color);
+    background-color: var(--lighter-color);
     border-color: #fff9f6;
 }
 
@@ -294,15 +331,15 @@ footer .next_btn {
     border: none;
     outline: none;
     color: #fff;
-    background-color: #FF6500;
+    background-color: var(--primary-color);
     border-radius: 5px;
-    border: 1px solid #FF6500;
+    border: 1px solid var(--primary-color);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 footer .next_btn:hover {
-    background-color: #d25807;
+    background-color: var(--secondry-color);
 }
 
 .result_box {
@@ -322,7 +359,7 @@ footer .next_btn:hover {
 
 .result_box .icon {
     font-size: 100px;
-    color: #FF6500;
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 
@@ -331,14 +368,12 @@ footer .next_btn:hover {
     font-weight: 500;
 }
 
-.result_box .score_text span {
-    display: flex;
-    margin: 10px 0;
+.result_box .score_text p {
     font-size: 18px;
     font-weight: 500;
 }
 
-.score_text span p {
+.score_text p span {
     font-weight: 600;
     padding: 0 4px;
 }
@@ -357,14 +392,102 @@ footer .next_btn:hover {
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
-    border: 1px solid #FF6500;
+    border: 1px solid var(--primary-color);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-img {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    justify-self: center;
+@media screen and (max-width: 768px) {
+
+    .logo .sesc_logo {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .start_btn button {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+
+    .info_box {
+        width: 90%;
+    }
+
+    .quiz_box {
+        width: 90%;
+        margin-top: 20px
+    }
+    
+    .quiz_box header {
+        height: 70px;
+        padding: 5px 20px;
+    }
+    
+    .quiz_box header .title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .quiz_box header .timer {
+        width: 135px;
+        padding: 0 8px;
+    }
+    
+    .quiz_box header .timer .time_text {
+        font-size: 15px;
+    }
+    
+    .quiz_box section {
+        padding: 20px 15px 20px 15px;
+    }
+    
+    .quiz_box section .que_text {
+        font-size: 18px;
+    }
+    
+    .quiz_box section .option_list {
+        padding: 15px 0;
+    }
+    
+    section .option_list .option {
+        font-size: 15px;
+        padding-left: 10px;
+    }
+    section .option_list .option span {
+        width: 88%;
+    }
+    
+    .quiz_box footer {
+        padding: 0 15px;
+    }
+    
+    footer .next_btn { 
+        font-size: 16px;
+    }  
+
+    .result_box {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .result_box .icon {
+        font-size: 80px;
+    }
+    
+    .result_box .complete_text {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    .result_box .buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .result_box .buttons button {
+        margin: 0;
+        padding: 0 10px;
+    }
+    
 }
